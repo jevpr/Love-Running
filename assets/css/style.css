@@ -1,5 +1,4 @@
 /* Google fonts import */
-
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap");
 /* Asterisk wildcard selector to override default styles added by the browser*/
 * {
@@ -25,6 +24,10 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #252525;
+}
+
+.hidden-heading {
+  display: none;
 }
 
 /*Header*/
@@ -72,7 +75,7 @@ nav {
 }
 
 /*Nav toggle*/
-#nav-toggle:checked-nav {
+#nav-toggle:checked ~ nav {
   display: block;
 }
 
@@ -120,7 +123,6 @@ main {
 #reasons {
   width: 90%;
   margin: 20px auto;
-  font-family: "Leto", sans-serif;
 }
 
 #reasons h2 {
@@ -158,6 +160,29 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/*Meetup Times section*/
+#times {
+  background: url("../images/dublin-city.webp") no-repeat center/cover;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#times div {
+  color: #fafafa;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  text-align: center;
+  /*This will not wrap on screens of less than 400px wide*/
+  flex-basis: 200px;
+  flex-grow: 1;
+  border: 2px solid white;
+}
+
+#times h3 {
+  /*Override the heading colour set in general styles*/
+  color: #fafafa;
 }
 
 /*Footer*/
